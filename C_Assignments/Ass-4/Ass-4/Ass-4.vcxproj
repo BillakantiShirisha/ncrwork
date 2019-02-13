@@ -146,7 +146,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="A4_pg10_Delete.cpp" />
     <ClCompile Include="A4_pg5_LtoU.cpp" />
+    <ClCompile Include="A4_pg7_sort.cpp" />
+    <ClCompile Include="A4_pg8_DMA.cpp" />
+    <ClCompile Include="A4_pg9_Match.cpp" />
+    <ClCompile Include="A4_pg_rev.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

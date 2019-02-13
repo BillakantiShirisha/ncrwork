@@ -18,5 +18,20 @@
     <ClCompile Include="A4_pg5_LtoU.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="A4_pg_rev.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="A4_pg7_sort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="A4_pg8_DMA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="A4_pg9_Match.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="A4_pg10_Delete.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
