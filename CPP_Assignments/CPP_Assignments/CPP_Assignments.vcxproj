@@ -146,6 +146,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="A1_pg1_Time.cpp" />
+    <ClCompile Include="A1_pg2_Student.cpp" />
+    <ClCompile Include="A1_pg9_Swap.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
