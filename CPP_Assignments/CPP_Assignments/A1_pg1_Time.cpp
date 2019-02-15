@@ -28,6 +28,6 @@ int main()
 	t3.add(t1, t2);
 	t3.display();
 	t1.display();
-	t2.display();
+	t2.display(); 
 	return 0;
 }

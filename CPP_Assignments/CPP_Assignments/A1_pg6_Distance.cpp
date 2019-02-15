@@ -7,7 +7,7 @@ public:
 	Size(int x)
 	{
 		cout << "Call by Value\n";
-	}
+	} 
 	Size(Size &c)
 	{
 		cout << "Call by Reference\n";

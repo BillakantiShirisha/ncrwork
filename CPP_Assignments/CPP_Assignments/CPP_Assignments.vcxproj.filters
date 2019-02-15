@@ -24,5 +24,20 @@
     <ClCompile Include="A1_pg9_Swap.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="A1_pg3_Constructors.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="A1_pg4_Inline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="A1_pg5_Distance.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="A1_pg6_Distance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="A1_pg6_Points.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

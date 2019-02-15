@@ -18,7 +18,7 @@ void calc(Point p1, Point p2)
 }
 int main()
 {
-	Point pt(2, 3), pr(4, 8);
+	Point pt(2, 3), pr(4, 8;
 	calc(pt, pr);
 	return 0;
 }

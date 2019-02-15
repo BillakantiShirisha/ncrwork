@@ -148,6 +148,11 @@
   <ItemGroup>
     <ClCompile Include="A1_pg1_Time.cpp" />
     <ClCompile Include="A1_pg2_Student.cpp" />
+    <ClCompile Include="A1_pg3_Constructors.cpp" />
+    <ClCompile Include="A1_pg4_Inline.cpp" />
+    <ClCompile Include="A1_pg5_Distance.cpp" />
+    <ClCompile Include="A1_pg6_Distance.cpp" />
+    <ClCompile Include="A1_pg6_Points.cpp" />
     <ClCompile Include="A1_pg9_Swap.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
