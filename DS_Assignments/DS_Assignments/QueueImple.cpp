@@ -13,8 +13,8 @@ public:
 	bool underflow();
 	bool overflow();
 	void display();
-	~Queue();
 	void getSize(int);
+	~Queue();
 };
 Queue::Queue()
 {

@@ -147,6 +147,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BalancingSymbols.cpp" />
+    <ClCompile Include="CircularQueueImple.cpp" />
+    <ClCompile Include="InfixToPostfix.cpp" />
+    <ClCompile Include="InfixToPrefix.cpp" />
+    <ClCompile Include="LinkedList.cpp" />
+    <ClCompile Include="PostfixEvaluation.cpp" />
+    <ClCompile Include="QueueImple.cpp" />
     <ClCompile Include="Stack_Imple.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
