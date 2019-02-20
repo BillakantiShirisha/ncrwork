@@ -153,6 +153,8 @@
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="PostfixEvaluation.cpp" />
     <ClCompile Include="QueueImple.cpp" />
+    <ClCompile Include="QueueUsingLL.cpp" />
+    <ClCompile Include="StackUsingLL.cpp" />
     <ClCompile Include="Stack_Imple.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

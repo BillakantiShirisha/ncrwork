@@ -79,7 +79,6 @@ int main()
 	st.enque(4);
 	cout << "Dequed element is" << st.deque() << endl;
 	cout << "Dequed element is" << st.deque() << endl;
-	st.deque();
 	st.display();
 	return 0;
 }
