@@ -80,7 +80,7 @@ int prec(char c)
 }
 int main()
 {
-	int  i,a,b;
+	int  i,a,b,s=0,k=1;
 	char str[30], c, op[30];
 	Stack st;
 	cin >> str;
@@ -88,9 +88,7 @@ int main()
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		c = str[i];
-		if (isdigit(c))
-			st.push(c - 48);
-		else
+		if (c=='+' || c=='-' || c=='*' || c=='/')
 		{
 			a = st.pop();
 			b = st.pop();
@@ -102,6 +100,17 @@ int main()
 				st.push(a * b);
 			else if (c == '/')
 				st.push(b / a);
+		}
+		else if (c != '@')
+		{
+			s = s * k+(c-48);
+			k = k * 10;
+		}
+		else if(c=='@')
+		{
+			st.push(s);
+			k = 1;
+			s = 0;
 		}
 	}
 	cout << st.peek();

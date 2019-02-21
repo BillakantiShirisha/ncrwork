@@ -2,8 +2,7 @@
 using namespace std;
 struct node
 {
-	int coeff;
-	int pow;
+	int data;
 	struct node *next;
 };
 class List
@@ -11,7 +10,7 @@ class List
 	struct node *start;
 public:
 	List();
-	void insertLast(int,int);
+	void insertLast(int);
 	void addPoly(List &, List &);
 	void travelForward();
 	~List();
@@ -20,12 +19,11 @@ List::List()
 {
 	start = NULL;
 }
-void List::insertLast(int ele,int tele)
+void List::insertLast(int ele)
 {
 	struct node *temp, *cur;
 	temp = new node;
-	temp->pow = ele;
-	temp->coeff = tele;
+	temp->data = ele;
 	temp->next = NULL;
 	if (start == NULL)
 		start = temp;
@@ -41,33 +39,27 @@ void List::addPoly(List &l1, List &l2)
 {
 	struct node *p1 = l1.start;
 	struct node *p2 = l2.start;
-	while (p1!=NULL && p2!=NULL)
+	while (p1 != NULL && p2 != NULL)
 	{
-		if (p1->pow > p2->pow)
+		if (p1->data < p2->data)
 		{
-			insertLast(p1->pow, p1->coeff);
+			insertLast(p1->data);
 			p1 = p1->next;
-		}
-		else if (p2->pow > p1->pow)
-		{
-			insertLast(p2->pow, p2->coeff);
-			p2 = p2->next;
 		}
 		else
 		{
-			insertLast(p1->pow, ((p1->coeff) + (p2->coeff)));
-			p1 = p1->next;
+			insertLast(p2->data);
 			p2 = p2->next;
 		}
 	}
 	while (p1 != NULL)
 	{
-		insertLast(p1->pow, p1->coeff);
+		insertLast(p1->data);
 		p1 = p1->next;
 	}
 	while (p2 != NULL)
 	{
-		insertLast(p2->pow, p2->coeff);
+		insertLast(p2->data);
 		p2 = p2->next;
 	}
 }
@@ -77,7 +69,7 @@ void List::travelForward()
 	cur = start;
 	while (cur != NULL)
 	{
-		cout << cur->coeff<<"x^" << cur->pow << "+";
+		cout << cur->data<<" ";
 		cur = cur->next;
 	}
 	cout << endl;
@@ -94,17 +86,17 @@ List::~List()
 }
 int main()
 {
-	int c,ch,cho, se, ele,tele;
-	List l1,l2,l3;
+	int c, ch, cho, se, ele, tele;
+	List l1, l2, l3;
 	while (1)
 	{
 		cout << "Enter first list choice:\n1.insert\n2.Exit\n";
 		cin >> ch;
 		if (ch == 1)
 		{
-			cout << "Enter power and coffecient\n";
-			cin >> ele >> tele;
-			l1.insertLast(ele, tele);
+			cout << "Enter element\n";
+			cin >> ele;
+			l1.insertLast(ele);
 		}
 		else
 			break;
@@ -115,9 +107,9 @@ int main()
 		cin >> ch;
 		if (ch == 1)
 		{
-			cout << "Enter power and coffecient\n";
-			cin >> ele >> tele;
-			l2.insertLast(ele, tele);
+			cout << "Enter element\n";
+			cin >> ele ;
+			l2.insertLast(ele);
 		}
 		else
 			break;
@@ -128,20 +120,20 @@ int main()
 	l3.travelForward();
 	/*while (1)
 	{
-		cout << "Enter choice\n1.Add polynomial\n2.Print list\n3.Exit\n";
-		cin >> c;
-		switch (c)
-		{
-		case 1:
-			l3.addPoly(l1, l2);
-			break;
-		case 2:
-			cout << "Forward list is\n";
-			l3.travelForward();
-			break;
-		}
-		if (c == 3)
-			break;
+	cout << "Enter choice\n1.Add polynomial\n2.Print list\n3.Exit\n";
+	cin >> c;
+	switch (c)
+	{
+	case 1:
+	l3.addPoly(l1, l2);
+	break;
+	case 2:
+	cout << "Forward list is\n";
+	l3.travelForward();
+	break;
+	}
+	if (c == 3)
+	break;
 	}*/
 	return 0;
 }
