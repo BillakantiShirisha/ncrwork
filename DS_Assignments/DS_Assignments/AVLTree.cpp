@@ -20,18 +20,24 @@ public:
 	int height();
 	int NLN();
 	int NNLN();
+	int B(node *);
+	struct node *balance(struct node*);
 	friend int findMax1(struct node *);
 	friend int findMin1(struct node *);
 	friend int height1(struct node *);
 	friend int NLN1(struct node *);
 	friend int NNLN1(struct node *);
+	friend struct node* L_Rotation(node *);
+	friend struct node* R_Rotation(node *);
+	friend struct node* LR_Rotation(node *);
+	friend struct node* RL_Rotation(node *);
 	~BST();
 	friend void printi(struct node *);
 	friend void printpr(struct node *);
 	friend void printpo(struct node *);
 	friend void deleteNode(struct node *);
 	friend struct node* inser(int ele, struct node *);
-	friend struct node* deleteEl(int ele,struct node *);
+	friend struct node* deleteEl(int ele, struct node *);
 	friend int FMax(struct node *);
 };
 BST::BST()
@@ -107,7 +113,7 @@ void printi(struct node *cur)
 	if (cur != NULL)
 	{
 		printi(cur->left);
-		cout << cur->data<<endl;
+		cout << cur->data << endl;
 		printi(cur->right);
 	}
 }
@@ -115,26 +121,26 @@ void printpr(struct node *cur)
 {
 	if (cur != NULL)
 	{
-		cout << cur->data<<endl;
+		cout << cur->data << endl;
 		printpr(cur->left);
 		printpr(cur->right);
 	}
 }
 void printpo(struct node *cur)
 {
-	
+
 
 	if (cur != NULL)
 	{
 
 		printpo(cur->left);
 		printpo(cur->right);
-		cout << cur->data<<endl;
+		cout << cur->data << endl;
 	}
 }
 void BST::inorder()
 {
-	
+
 	if (start != NULL)
 		printi(start);
 }
@@ -225,12 +231,65 @@ struct node * deleteEl(int ele, struct node *cur)
 		}
 		return cur;
 	}
-	else 
+	else
 		return NULL;
 }
 void BST::deleteEle(int ele)
 {
 	start = deleteEl(ele, start);
+}
+struct node* L_Rotation(struct node *cur)
+{
+	struct node *temp = cur->right;
+	cur->right = temp->left;
+	temp->left = cur;
+	return temp;
+}
+struct node* R_Rotation(struct node *cur)
+{
+	struct node *temp = cur->left;
+	cur->left = temp->right;
+	temp->right = cur;
+	return temp;
+}
+struct node* RL_Rotation(struct node *cur)
+{
+	struct node *temp = cur->right;
+	temp = R_Rotation(temp);
+	cur->right = temp->left;
+	temp->left = cur;
+	return temp;
+}
+struct node* LR_Rotation(struct node *cur)
+{
+	struct node *temp = cur->left;
+	temp = L_Rotation(temp);
+	cur->left = temp->right;
+	temp->right = cur;
+	return temp;
+}
+
+int BST::B(struct node *cur)
+{
+	return (height1(cur->left) - height1(cur->right));
+}
+struct node *BST::balance(struct node *cur)
+{
+	if (B(cur) > 1)
+	{
+		if (B(cur->left) == 1)
+			R_Rotation(cur);
+		else
+			LR_Rotation(cur);
+	}
+	if (B(cur->right) < -1)
+	{
+		if (B(cur->right) == 1)
+			RL_Rotation(cur);
+		else
+			L_Rotation(cur);
+	}
+	return cur;
 }
 int main()
 {

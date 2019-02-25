@@ -147,6 +147,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BalancingSymbols.cpp" />
+    <ClCompile Include="BinarySearch.cpp" />
+    <ClCompile Include="BinaryTree.cpp" />
     <ClCompile Include="BubbleSort.cpp" />
     <ClCompile Include="CircularQueueImple.cpp" />
     <ClCompile Include="Dequeue.cpp" />
@@ -155,6 +157,7 @@
     <ClCompile Include="InfixToPostfix.cpp" />
     <ClCompile Include="InfixToPrefix.cpp" />
     <ClCompile Include="InsertionSort.cpp" />
+    <ClCompile Include="LinearSearch.cpp" />
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="MergeList.cpp" />
     <ClCompile Include="MergeSort.cpp" />
