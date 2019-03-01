@@ -27,13 +27,13 @@ int main()
 	}
 	WaitForSingleObject(hThread, 5000);
 	DWORD ExitCode=1;
-	BOOL b=TerminateThread(hThread, ExitCode);
+	GetExitCodeThread(hThread, &ExitCode);
+	printf("Exit code of the thread is %d\n",ExitCode);
+	BOOL b = TerminateThread(hThread, ExitCode);
 	if (b == 0)
 		printf("Failed to Terminate Thread\n");
 	else
 		printf("Thread Terminated successfully\n");
-	GetExitCodeThread(hThread, &ExitCode);
-	printf("Exit code of the thread is %d\n",ExitCode);
 	CloseHandle(hThread);
 	getchar();
 	return 0;
