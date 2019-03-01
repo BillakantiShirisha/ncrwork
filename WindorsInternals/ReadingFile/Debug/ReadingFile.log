@@ -4,6 +4,5 @@ d:\c_assignments\ncrwork\windorsinternals\readingfile\fread.cpp(37): warning C44
   d:\c_assignments\ncrwork\windorsinternals\readingfile\fread.cpp(37): note: consider using '%llS' in the format string
   d:\c_assignments\ncrwork\windorsinternals\readingfile\fread.cpp(37): note: consider using '%LS' in the format string
   d:\c_assignments\ncrwork\windorsinternals\readingfile\fread.cpp(37): note: consider using '%wS' in the format string
-d:\c_assignments\ncrwork\windorsinternals\readingfile\fread.cpp(28): warning C4101: 'dwNbw': unreferenced local variable
   ReadingFile.vcxproj -> D:\C_Assignments\ncrwork\WindorsInternals\Debug\ReadingFile.exe
   ReadingFile.vcxproj -> D:\C_Assignments\ncrwork\WindorsInternals\Debug\ReadingFile.pdb (Full PDB)

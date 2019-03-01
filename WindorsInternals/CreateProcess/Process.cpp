@@ -22,10 +22,11 @@ int main()
 		getchar();
 		return 0;
 	}
-	printf("Handle of process is %ld\n", pi.hProcess);
-	printf("Process  ID of process is %ld\n", pi.dwProcessId);
-	printf("Handle of thread is %ld\n", pi.hThread);
-	printf("Process ID thread is %ld\n", pi.dwThreadId);
+	printf("Current Process ID is %ld\n", GetCurrentProcessId());
+	printf("Current Thread ID is %ld\n", GetCurrentThreadId());
+	printf("Process ID is %ld\n", GetProcessId(pi.hProcess));
+	printf("Thread ID is %ld\n", GetThreadId(pi.hThread));
+	printf("Process ID of Thread is %ld\n", GetProcessIdOfThread(pi.hThread));
 	cout << endl;
 	delete lps;
 	lps = new WCHAR[100];
@@ -37,10 +38,11 @@ int main()
 		getchar();
 		return 0;
 	}
-	printf("Handle of process is %ld\n", pi.hProcess);
-	printf("Process  ID of process is %ld\n", pi.dwProcessId);
-	printf("Handle of thread is %ld\n", pi.hThread);
-	printf("Process ID thread is %ld\n", pi.dwThreadId);
+	printf("Current Process ID is %ld\n", GetCurrentProcessId());
+	printf("Current Thread ID is %ld\n", GetCurrentThreadId());
+	printf("Process ID is %ld\n", GetProcessId(pi.hProcess));
+	printf("Thread ID is %ld\n", GetThreadId(pi.hThread));
+	printf("Process ID of Thread is %ld\n", GetProcessIdOfThread(pi.hThread));
 	cout << endl;
 	delete lps;
 	getchar();

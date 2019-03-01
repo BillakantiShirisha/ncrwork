@@ -1,0 +1,4 @@
+﻿  Resume.cpp
+d:\c_assignments\ncrwork\windorsinternals\resumethread\resume.cpp(21): warning C4101: 'arryHand': unreferenced local variable
+  ResumeThread.vcxproj -> D:\C_Assignments\ncrwork\WindorsInternals\Debug\ResumeThread.exe
+  ResumeThread.vcxproj -> D:\C_Assignments\ncrwork\WindorsInternals\Debug\ResumeThread.pdb (Full PDB)

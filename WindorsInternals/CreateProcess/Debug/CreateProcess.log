@@ -1,8 +1,3 @@
 ﻿  Process.cpp
-d:\c_assignments\ncrwork\windorsinternals\createprocess\process.cpp(25): warning C4477: 'printf' : format string '%ld' requires an argument of type 'long', but variadic argument 1 has type 'HANDLE'
-d:\c_assignments\ncrwork\windorsinternals\createprocess\process.cpp(27): warning C4477: 'printf' : format string '%ld' requires an argument of type 'long', but variadic argument 1 has type 'HANDLE'
-d:\c_assignments\ncrwork\windorsinternals\createprocess\process.cpp(40): warning C4477: 'printf' : format string '%ld' requires an argument of type 'long', but variadic argument 1 has type 'HANDLE'
-d:\c_assignments\ncrwork\windorsinternals\createprocess\process.cpp(42): warning C4477: 'printf' : format string '%ld' requires an argument of type 'long', but variadic argument 1 has type 'HANDLE'
-cl : Command line warning D9028: minimal rebuild failure, reverting to normal build
   CreateProcess.vcxproj -> D:\C_Assignments\ncrwork\WindorsInternals\Debug\CreateProcess.exe
   CreateProcess.vcxproj -> D:\C_Assignments\ncrwork\WindorsInternals\Debug\CreateProcess.pdb (Full PDB)
