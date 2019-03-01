@@ -1,0 +1,6 @@
+﻿  Source.cpp
+d:\c_assignments\ncrwork\windorsinternals\handleinherit\source.cpp(57): warning C4477: 'printf' : format string '%ld' requires an argument of type 'long', but variadic argument 1 has type 'HANDLE'
+d:\c_assignments\ncrwork\windorsinternals\handleinherit\source.cpp(59): warning C4477: 'printf' : format string '%ld' requires an argument of type 'long', but variadic argument 1 has type 'HANDLE'
+d:\c_assignments\ncrwork\windorsinternals\handleinherit\source.cpp(23): warning C4101: 'nbr': unreferenced local variable
+  HandleInherit.vcxproj -> D:\C_Assignments\ncrwork\WindorsInternals\Debug\HandleInherit.exe
+  HandleInherit.vcxproj -> D:\C_Assignments\ncrwork\WindorsInternals\Debug\HandleInherit.pdb (Full PDB)

@@ -1,0 +1,4 @@
+﻿  Thread.cpp
+d:\c_assignments\ncrwork\windorsinternals\threadid\thread.cpp(21): warning C4101: 'arryHand': unreferenced local variable
+  ThreadId.vcxproj -> D:\C_Assignments\ncrwork\WindorsInternals\Debug\ThreadId.exe
+  ThreadId.vcxproj -> D:\C_Assignments\ncrwork\WindorsInternals\Debug\ThreadId.pdb (Full PDB)

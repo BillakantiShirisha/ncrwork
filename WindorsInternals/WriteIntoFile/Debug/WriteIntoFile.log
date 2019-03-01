@@ -1,0 +1,9 @@
+﻿  Write.cpp
+d:\c_assignments\ncrwork\windorsinternals\writeintofile\write.cpp(37): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'LPTSTR'
+  d:\c_assignments\ncrwork\windorsinternals\writeintofile\write.cpp(37): note: consider using '%ls' in the format string
+  d:\c_assignments\ncrwork\windorsinternals\writeintofile\write.cpp(37): note: consider using '%lls' in the format string
+  d:\c_assignments\ncrwork\windorsinternals\writeintofile\write.cpp(37): note: consider using '%Ls' in the format string
+  d:\c_assignments\ncrwork\windorsinternals\writeintofile\write.cpp(37): note: consider using '%ws' in the format string
+d:\c_assignments\ncrwork\windorsinternals\writeintofile\write.cpp(28): warning C4101: 'dwNbw': unreferenced local variable
+  WriteIntoFile.vcxproj -> D:\C_Assignments\ncrwork\WindorsInternals\Debug\WriteIntoFile.exe
+  WriteIntoFile.vcxproj -> D:\C_Assignments\ncrwork\WindorsInternals\Debug\WriteIntoFile.pdb (Full PDB)
