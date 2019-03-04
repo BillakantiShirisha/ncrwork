@@ -11,39 +11,58 @@ int _tmain(int argc, TCHAR* argv[])
 	TCHAR buff[BUFFERSIZE];
 	//_tprintf(_T("%S"), argv[1]);
 	//return 0;
-	//LPCWSTR fileName = L"welcome.txt";
-	hFile = CreateFile(argv[1], GENERIC_READ, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
+	//SECURITY_ATTRIBUTES *sAttr;
+	SECURITY_ATTRIBUTES sattr;
+	sattr.bInheritHandle = TRUE;
+	sattr.lpSecurityDescriptor = 0;
+	sattr.nLength = sizeof(SECURITY_DESCRIPTOR);
+	//sAttr = &sattr;
+	LPCSTR fileName = "Welcome.txt";
+	hFile = CreateFile(fileName, GENERIC_READ, FILE_SHARE_READ, &sattr, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
 	if (hFile == INVALID_HANDLE_VALUE)
 	{
 		_tprintf(_T("File open error : %d\n"), GetLastError());
 		getchar();
 		return -1;
 	}
-	_tprintf(_T("File openend successfully : %s\n"), argv[1]);
+	_tprintf(_T("File openend successfully : %s\n"), fileName);
+	//DuplicateHandle(GetCurrentProcess(),hFile,)
 	DWORD nbr;
-	ZeroMemory(buff, sizeof(buff));
-
+	//ZeroMemory(buff, si);
 	STARTUPINFO si;
 	PROCESS_INFORMATION pi;
 	SECURITY_ATTRIBUTES sa;
+	SECURITY_ATTRIBUTES *sA = &sa;;
 	//HANDLE hProcess;
-
+	CHAR tszFileHandleString[16];
+	//CHAR a = (CHAR)hFile;
+	//printf("Handle value = %\n", hFile);
+	sprintf(tszFileHandleString, "%d", hFile);
+	printf("Handle value = %s\n", tszFileHandleString);
+	printf("Handle value = %d\n", hFile);
 	ZeroMemory(&si, sizeof(si));
 	si.cb = sizeof(si);
+	ZeroMemory(&sa, sizeof(sa));
 	sa.bInheritHandle = TRUE;
+	sa.lpSecurityDescriptor = 0;
+	sa.nLength = sizeof(SECURITY_DESCRIPTOR);
 	ZeroMemory(&pi, sizeof(pi));
-	LPWSTR lp = NULL;
-	lp = new WCHAR[200];
+	LPSTR lp = NULL;
+	lp = new CHAR[200];
 	//cout << _countof(L"notepad");
-	wcscpy_s(lp, _countof(L"\"D:\\C_Assignments\\ncrwork\\WindorsInternals\\HandleInherit2\\Source.cpp\" hFile"), L"\"D:\\C_Assignments\\ncrwork\\WindorsInternals\\HandleInherit2\\Source.cpp\" hFile");
+	//strcpy(lp, "\"HI.exe\"");
+	//strcat(lp, " ");
+	strcpy(lp, tszFileHandleString);
 	//wcout << lp << endl;
+	cout << lp << "\n";
+	//wcscpy_s(lp, _countof(L"notepad"), L"notepad");
 	if (!CreateProcess(
-		NULL,
+		_T("Source1.exe"),
 		lp,
-		&sa,
+		sA,
 		NULL,
 		TRUE,
-		CREATE_NEW_CONSOLE,
+		0,
 		NULL,
 		NULL,
 		&si,
@@ -59,9 +78,10 @@ int _tmain(int argc, TCHAR* argv[])
 	printf("Handle of thread %ld\n", pi.hThread);
 	printf(" Process id thread %ld\n", pi.dwThreadId);
 	cout << "\n";
-
+	WaitForSingleObject(pi.hProcess, INFINITE);
+	CloseHandle(pi.hProcess);
+	CloseHandle(pi.hThread);
+	printf("Child process %d finished.\n", pi.dwProcessId);
 	delete lp;
-
-
 	return 0;
 }
