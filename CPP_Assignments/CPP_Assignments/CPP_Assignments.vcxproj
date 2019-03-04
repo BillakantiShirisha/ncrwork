@@ -153,6 +153,7 @@
     <ClCompile Include="A1_pg5_Distance.cpp" />
     <ClCompile Include="A1_pg6_Distance.cpp" />
     <ClCompile Include="A1_pg6_Points.cpp" />
+    <ClCompile Include="A1_pg8_Matrix.cpp" />
     <ClCompile Include="A1_pg9_Swap.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

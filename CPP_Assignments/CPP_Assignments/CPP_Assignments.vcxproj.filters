@@ -39,5 +39,8 @@
     <ClCompile Include="A1_pg6_Points.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="A1_pg8_Matrix.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
