@@ -1,0 +1,6 @@
+﻿  Source1.cpp
+  Source.cpp
+  Generating Code...
+LINK : warning LNK4067: ambiguous entry point; selected 'mainCRTStartup'
+  16Pgm_Priority.vcxproj -> D:\C_Assignments\ncrwork\WindorsInternals\Debug\16Pgm_Priority.exe
+  16Pgm_Priority.vcxproj -> D:\C_Assignments\ncrwork\WindorsInternals\Debug\16Pgm_Priority.pdb (Full PDB)

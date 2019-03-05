@@ -1,0 +1,6 @@
+﻿  Single.cpp
+d:\c_assignments\ncrwork\windorsinternals\pg24_waitsingle\single.cpp(17): warning C4101: 'arr_hand': unreferenced local variable
+d:\c_assignments\ncrwork\windorsinternals\pg24_waitsingle\single.cpp(16): warning C4101: 'hTh2': unreferenced local variable
+d:\c_assignments\ncrwork\windorsinternals\pg24_waitsingle\single.cpp(15): warning C4101: 'thId2': unreferenced local variable
+  Pg24_WaitSingle.vcxproj -> D:\C_Assignments\ncrwork\WindorsInternals\Debug\Pg24_WaitSingle.exe
+  Pg24_WaitSingle.vcxproj -> D:\C_Assignments\ncrwork\WindorsInternals\Debug\Pg24_WaitSingle.pdb (Full PDB)

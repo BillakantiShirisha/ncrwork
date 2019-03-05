@@ -1,0 +1,9 @@
+﻿  sub.cpp
+  Source.cpp
+  mul.cpp
+  div.cpp
+  add.cpp
+  Generating Code...
+     Creating library D:\C_Assignments\ncrwork\WindorsInternals\Debug\MyDll.lib and object D:\C_Assignments\ncrwork\WindorsInternals\Debug\MyDll.exp
+  MyDll.vcxproj -> D:\C_Assignments\ncrwork\WindorsInternals\Debug\MyDll.dll
+  MyDll.vcxproj -> D:\C_Assignments\ncrwork\WindorsInternals\Debug\MyDll.pdb (Full PDB)
