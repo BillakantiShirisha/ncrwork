@@ -1,0 +1,12 @@
+<script src="jquery-3.3.1.js"></script>
+<script>
+function funct()
+{
+$("#para").text("Typed text is : "+$("#txt").val());
+}
+</script>
+<html>
+<h3>Type some text in the box below</h3>
+<input type="text" id="txt" oninput="funct()"/><br>
+<p id="para"></p>
+</html>

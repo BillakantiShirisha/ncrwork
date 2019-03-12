@@ -1,0 +1,72 @@
+<script src="jquery-3.3.1.js"></script>
+<script>
+$(document).ready(function(){
+$("#checkbtn").change(function()
+{
+$("#hno_p").val($("#hno").val());
+$("#str_p").val($("#str").val());
+$("#lmark_p").val($("#lmark").val());
+$("#mdl_p").val($("#mdl").val());
+$("#ste_p").val($("#ste").val());
+$("#pin_p").val($("#pin").val());
+});
+$("#rd").click(function()
+{
+if($("#sp").text()=="Hide")
+$("#sp").text("Show");
+else
+$("#sp").text("Hide");
+$("#one").toggle();
+});
+});
+</script>
+<html>
+<h3>Student Form</h3>
+<form>
+<input type="radio" id="rd"/><span id="sp">Hide</span><br>
+<div id="one">
+<b style="color:blue">Present Address:</b><br>
+House No:<br><input type="text" id="hno"/><br>
+Street Name:<br><input type="text" id="str"/><br>
+LandMark:<br><input type="text" id="lmark"/><br>
+Mandal:<br>
+<select id="mdl">
+<option value="n"></option>
+<option value="am">Ameerpet</option>
+<option value="ab">Amberpet</option>
+<option value="kp">Kukatpally</option>
+<option value="bp">Bachupally</option>
+</select><br>
+State:<br>
+<select id="ste">
+<option value="n"></option>
+<option value="hd">Hyderabad</option>
+<option value="wg">Warangal</option>
+<option value="kr">Karimnagar</option>
+<option value="md">Medak</option>
+</select><br>
+PinCode:<br><input type="text" id="pin"/><br><br>
+<input type="checkbox" id="checkbtn"><b style="color:red">Same as Present Address</b><br>
+House No:<br><input type="text" id="hno_p"/><br>
+Street Name:<br><input type="text" id="str_p"/><br>
+LandMark:<br><input type="text" id="lmark_p"/><br>
+Mandal:<br>
+<select id="mdl_p">
+<option value="n"></option>
+<option value="am">Ameerpet</option>
+<option value="ab">Amberpet</option>
+<option value="kp">Kukatpally</option>
+<option value="bp">Bachupally</option>
+</select><br>
+State:<br>
+<select id="ste_p">
+<option value="n"></option>
+<option value="hd">Hyderabad</option>
+<option value="wg">Warangal</option>
+<option value="kr">Karimnagar</option>
+<option value="md">Medak</option>
+</select><br>
+PinCode:<br><input type="text" id="pin_p"/><br>
+</div>
+</form>
+</html>
