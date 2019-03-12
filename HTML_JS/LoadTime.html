@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Load time</title>
+<script>
+function onLoad()
+{
+var n=new Date().getTime();
+var page_load_time=n-performance.timing.navigationStart;
+alert(page_load_time);
+console.log(page_load_time);
+}
+</script>
+</head>
+<body onload="onLoad()">
+          <h3>changes text background color and background image<h3>
+<p id="para">Good Morning CDAC</p>
+         <script>
+            document.getElementById("para").style.color="blue";
+document.getElementById("para").style.fontsize='40px';
+ document.body.style.background = "url('siri.jpg')";
+        </script>
+</body>
+</html>

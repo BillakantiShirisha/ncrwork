@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>File upload</title>
+</head>
+<body>
+<h3>Upload file and clik on button to find size</h3>
+<input type="file" id="myfile"><br> 
+<button id="one" onclick="fileUpload()">UploadFile</button>
+         <script>
+	 
+            function fileUpload()
+	    {
+		var x=document.getElementById("myfile");
+		var size=parseFloat(x.files[0].size/1024);
+		alert(size + "KB");
+	    }
+         </script>
+</body>
+</html>

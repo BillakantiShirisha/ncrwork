@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Add Field</title>
+</head>
+<body>
+<p id="para"> </p>
+<h3>Click on button to add new text field</h3>
+<button onclick="addBlock()" id="one">Register</button>
+         <script>
+            function addBlock()
+	    {
+            var text = document.createTextNode("Enter Name:");
+            var field = document.createElement("input");
+            var br = document.createElement("br");
+	    field.type="text"; 
+	    document.body.appendChild(br); 
+	    document.body.appendChild(text); 
+	    document.body.appendChild(field);
+	    document.getElementById("para");
+            }
+        </script>
+</body>
+</html>
