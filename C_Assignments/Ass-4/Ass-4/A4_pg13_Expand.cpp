@@ -1,35 +1,43 @@
 #include<stdio.h>
 #include<string.h>
 #include<ctype.h>
-void Expand(char *s1, char *s2)
+#include<stdlib.h>
+//Function to expand the string
+char* ExpandString(char *string1, char *string2)
 {
-	int i,j=0,k;
-	for (i = 0; s1[i] != '\0'; i++)
+	int i, j = 0, k;
+	for (i = 0; string1[i] != '\0'; i++)
 	{
-		if (s1[i] != '-')
-			s2[j++] = s1[i];
+		//Checking weather the character is -
+		if (string1[i] != '-')
+		{
+			string2[j++] = string1[i];
+		}
+		//Character is alphabet or digit
 		else
 		{
-			if (isdigit(s1[i - 1]))
-			{
-				for (k = s1[i - 1] - 47; k < s1[i + 1] - 48; k++)
-					s2[j++] = k + 48;
-			}
-			else
-			{
-				for (k = s1[i - 1] - 96; k < s1[i + 1] - 97; k++)
-					s2[j++] = k + 97;
-			}
+			for (k = string1[i - 1] + 1; k < string1[i + 1]; k++)
+				string2[j++] = k;
 		}
 	}
-	s2[j] = '\0';
+	string2[j] = '\0';
+	return string2;
 }
 int main()
 {
-	char s1[50], s2[50];
-	printf("enter string1\n");
-	scanf("%s", s1);
-	Expand(s1, s2);
-	printf("%s", s2);
+	char *string1, *string2;
+	int size1, size2;
+	printf("Enter length of string\n");
+	scanf("%d", &size1);
+	string1 = (char*)malloc(sizeof(char)*size1);
+	printf("Enter string1\n");
+	scanf("%s", string1);
+	printf("Enter length of output string\n");
+	scanf("%d", &size2);
+	string2 = (char*)malloc(sizeof(char)*size2);
+	printf("Expanded string is %s", ExpandString(string1, string2));
+	free(string1);
+	free(string2);
+	getchar();
 	return 0;
 }
