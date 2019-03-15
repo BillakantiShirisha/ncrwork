@@ -146,6 +146,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="A3_pg1_TempleteFun.cpp" />
     <ClCompile Include="A3_pg2_Stack.cpp" />
     <ClCompile Include="A3_pg3_Shape.cpp" />
     <ClCompile Include="A3_pg4_Scope.cpp" />

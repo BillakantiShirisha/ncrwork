@@ -27,5 +27,8 @@
     <ClCompile Include="A3_pg4_Scope.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="A3_pg1_TempleteFun.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
