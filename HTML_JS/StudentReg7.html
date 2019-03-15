@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Details</title>
+</head>
+<body>
+    <h3>Registration Form</h3>
+    <form>
+        Name:<br><input type="text" id="name" placeholder="Enter name" /><br><br>
+        Photo Upload:<br><input type="file" id="photo" /><br><br>
+        Educational Qualifications:<br><textarea></textarea><br ><br >
+        Date of Birth:<br><input type="date" id="dob" /><br><br>
+        <input type="button" value="submit" onclick="funct()"/><br><br>
+    </form>
+    <script>
+        function funct()
+        {
+            var name_test = document.getElementById("name").value;
+            var name_reg = new RegExp('^[a-z A-Z]+$');
+            if (!name_reg.test(name_test)) 
+                alert("Enter valid name"); 
+            var curDate = new Date();
+            var curr_year = curDate.getFullYear();
+            var curr_month = curDate.getMonth();
+            var dt1 = document.getElementById("dob").value;
+            var birth_date = new Date(dt1);
+            var birth_year = birth_date.getFullYear();
+            var birth_month = birth_date.getMonth();
+            var calc_year = curr_year - birth_year;
+            var calc_month = curr_month - birth_month;
+            if (calc_month < 0)
+                calc_year = calc_year - 1;
+            final_result = calc_year.toString();
+            var field = document.createElement("input");
+            field.type = "text";
+            field.id = "two";
+            document.body.appendChild(field);
+            document.getElementById("two").value = "Age is "+final_result+" Years";
+        }
+    </script>
+</body>
+</html>
